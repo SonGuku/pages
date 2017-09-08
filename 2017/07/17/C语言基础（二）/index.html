@@ -9,8 +9,16 @@
 
     <!--Description-->
     
-        <meta name="description" content="看过我主页的兄弟们，应该点击了那个js插件。最开始我的博客名字挡住了插件，每次都点击在标签上了，别的位置还好就是标签那个位置点击不了插件。有强迫症的我，一定要解决，要不页面就太不丝滑了。
-不是专业前端，只浅浅的接触了HTML、css、js。这可怎么办呢，百度的关键字都不知道输入什么。我也不记得搜的是">
+        <meta name="description" content="逻辑运算
+
+&amp;amp;&amp;amp;  逻辑与运算符
+||  逻辑或运算符
+!   逻辑非运算符
+
+逻辑运算的结果也只有两个：成立就为&amp;quot;真&amp;quot;，返回1；不成立就为&amp;quot;假&amp;quot;，返回0
+复合赋值运算符
+
++=  加赋值运算符。如a += 3+1，等价于 a = a +（3+">
     
 
     <!--Author-->
@@ -20,7 +28,7 @@
 
     <!-- Title -->
     
-    <title>让我痛苦的一天 | Lambda</title>
+    <title>C语言基础（二） | Lambda</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +65,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>让我痛苦的一天</h1>
+                    <h1>C语言基础（二）</h1>
                 </div>
             </div>
         </div>
@@ -70,9 +78,47 @@
         <div class="row">
             <!-- Post Main Content -->
             <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>看过我主页的兄弟们，应该点击了那个js插件。最开始我的博客名字挡住了插件，每次都点击在标签上了，别的位置还好就是标签那个位置点击不了插件。有强迫症的我，一定要解决，要不页面就太不丝滑了。</p>
-<p>不是专业前端，只浅浅的接触了HTML、css、js。这可怎么办呢，百度的关键字都不知道输入什么。我也不记得搜的是什么了，就看到了pointer-events: none</p>
-<p>pointer-events: none意思就是鼠标事件失效的意思。属于css属性，有了它什么连接事件都再见了。一下就击穿了我的blog名字，点击到js插件了。完美解决，哈哈。</p>
+                <hr>
+<h2>逻辑运算</h2>
+<ul>
+<li>&amp;&amp;  逻辑与运算符</li>
+<li>||  逻辑或运算符</li>
+<li>!   逻辑非运算符</li>
+</ul>
+<p>逻辑运算的结果也只有两个：成立就为&quot;真&quot;，返回1；不成立就为&quot;假&quot;，返回0</p>
+<p>复合赋值运算符</p>
+<ul>
+<li>+=  加赋值运算符。如a += 3+1，等价于 a = a +（3+1）</li>
+<li>+=  加赋值运算符。如a += 3+1，等价于 a = a +（3+1）</li>
+<li>-=  减赋值运算符。如a -= 3+1，等价于 a = a -（3+1）</li>
+<li>*=  乘赋值运算符。如a *= 3+1，等价于 a = a *（3+1）</li>
+<li>/=  除赋值运算符。如a /= 3+1，等价于 a = a /（3+1）</li>
+<li>%=  取余赋值运算符。如a %= 3+1，等价于 a = a %（3+1）</li>
+</ul>
+<p>自增运算符和自减运算符</p>
+<ul>
+<li>++  自增运算符。如a++，++a，都等价于a = a+1</li>
+<li>--  自减运算符。如a--，--a，都等价于a = a-1</li>
+</ul>
+<p>逗号运算符和逗号表达式</p>
+<ul>
+<li>
+<p>逗号运算符主要用于连接表达式，例如：
+int a = 9;
+int b = 10;
+a = a+1 , b = 3*4;
+逗号表达式的运算过程是：从左到右的顺序，先计算表达式1，接着计算表达式2，...，最后计算表达式n</p>
+</li>
+<li>
+<p>整个逗号表达式的值是最后一个表达式的值c = (++a, a *= 2, b = a * 5); &lt;==&gt; c=b;</p>
+</li>
+</ul>
+<p>三目运算符：int a = (b &gt;5) ? 10 : 9;</p>
+<p>sizeof可以用来计算一个变量或者一个常量、一种数据类型所占的内存字节数。
+sizeof(10);
+char c = 'a';
+sizeof(c);
+sizeof(float);</p>
 
  
                 <!-- Meta -->
@@ -83,7 +129,7 @@
                         
                     </div>
                     <div class="post-date">
-                        2016 年 07 月 17 日
+                        2017 年 07 月 17 日
                     </div>
                 </div>
             </div>

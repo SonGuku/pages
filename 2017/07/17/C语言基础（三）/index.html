@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="最让人痛苦的++指针++
+一般形式：类名标识符  *指针变量名;
+12int *p;float *q;
+
+&amp;quot;*&amp;quot;是一个说明符，用来说明这个变量是个指针变量，是不能省略的，但它不属于变量名的一部分
+前面的类型标识符表示指针变量所指向的变量的类型，而且只能指向这种类型的变量
+指针的初">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Wen Zixun">
+    
+
+    <!-- Title -->
+    
+    <title>C语言基础（三） | Lambda</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/pages/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Noto+Serif:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Content -->
+    <section class="article-container">
+<!-- Back Home -->
+<a class="nav-back" href="/pages/">
+    <i class="fa fa-arrow-left"></i>
+</a>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>C语言基础（三）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Main Content -->
+            <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>最让人<strong>痛苦</strong>的++指针++</p>
+<p>一般形式：类名标识符  *指针变量名;</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int *p;</div><div class="line">float *q;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>&quot;*&quot;是一个说明符，用来说明这个变量是个指针变量，是不能省略的，但它不属于变量名的一部分</li>
+<li>前面的类型标识符表示指针变量所指向的变量的类型，而且只能指向这种类型的变量
+指针的初始化</li>
+</ul>
+<p>给指针指向的变量赋值
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">char a = 10;</div><div class="line"></div><div class="line">printf(&quot;修改前，a的值：%d\n&quot;, a);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// 指针变量p指向变量a</div><div class="line"></div><div class="line">char *p = &amp;a;//这个*  是定义指针的说明符</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// 通过指针变量p间接修改变量a的值</div><div class="line"></div><div class="line">*p = 9;//这个* 是指针运算符，表示 把9赋值给  指针指向的地址a，也就相当于 a ＝ 9；</div><div class="line"></div><div class="line">//这里 就是间接修改a的值</div><div class="line"></div><div class="line">printf(&quot;修改后，a的值：%d&quot;, a);</div></pre></td></tr></table></figure></p>
+<p>取出指针所指向变量的值</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">har a = 10;</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">char *p;</div><div class="line"></div><div class="line">p = &amp;a;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">char value = *p; //根据p值(即变量a的地址)访问对应的存储空间，并取出存储的内容(即取出变量a的值)，赋值给value</div><div class="line"></div><div class="line">printf(&quot;取出a的值：%d&quot;, value);</div></pre></td></tr></table></figure></p>
+<p>==注意注意==</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">在指针变量没有指向确定地址之前，不要对它所指的内容赋值。下面的写法是错误的</div><div class="line"></div><div class="line">int *p; </div><div class="line">*p = 10; //这是错误的</div><div class="line">应该在指针变量指向一个确定的变量后再进行赋值。下面的写法才是正确的</div><div class="line"></div><div class="line">// 定义2个int型变量</div><div class="line">int a = 6, b;</div><div class="line"></div><div class="line">// 定义一个指向变量b的指针变量p</div><div class="line">int *p;</div><div class="line">p = &amp;b;</div><div class="line"></div><div class="line">// 将a的值赋值给变量b</div><div class="line">*p = a;</div></pre></td></tr></table></figure></p>
+
+ 
+                <!-- Meta -->
+                <div class="post-meta">
+                    <hr>
+                    <br>
+                    <div class="post-tags">
+                        
+                    </div>
+                    <div class="post-date">
+                        2017 年 07 月 17 日
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Disqus Comments -->
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	console.log('Hexo-theme-hollow designed by zchen9 🙋 © 2015-' + (new Date()).getFullYear());
+</script>
+
+    <!-- Google Analytics -->
+    
+
+</body>
+
+</html>
